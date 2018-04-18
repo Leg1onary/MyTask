@@ -10,19 +10,21 @@
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body ng-controller="PersonCtrl">
+<body ng-controller="myappCtrl">
 
 <table class="table table-striped">
   <thead>
   <tr>
-    <th ng-repeat="metaData in person.data.metaData">{{metaData.name}}</th><th>Удалить</th>
+    <th ng-repeat="meta in metaData">{{meta}}</th><th></th>
   </tr>
   </thead>
-<tr ng-repeat="persons in person.data.rows">
-  <td ng-repeat="personsInfo in persons">{{personsInfo}}</td> <td><button>Delete</button> </td>
-</tr>
+  <tr ng-repeat="client in clients">
+    <td ng-repeat="meta in metaData">{{client[meta]}}</td><td><button><a ng-click="delete.clients($index).CARD">DELETE</a></button> </td>
+  </tr>
 </table>
-
+<br><br>
+<h2>Структура</h2>
+<div ng-repeat="client in clients">{{client}}<br><br></div>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
