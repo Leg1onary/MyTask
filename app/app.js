@@ -20,5 +20,12 @@ myApp.controller('myappCtrl', function ($scope, $http) {
            $scope.clients.push($scope.personInfo);
            $scope.personInfo = {};
         }
+        $scope.archive = function (indx) {
+            $scope.clients.splice(indx,1);
+        };
+        $scope.addClient = function() {
+            $scope.clients.push($scope.newClient);
+            $scope.newClient = '';
+        }
     });
 });
