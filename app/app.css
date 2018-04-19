@@ -1,17 +1,30 @@
 /* app css stylesheet */
 
 table {
-  border-collapse: collapse;
+    border-collapse: unset;
 }
 td, th {
   padding: 5px;
   border: 1px solid #000;
   text-align:left;
 }
-th {
-  background: gray;
-  color: #333;
+th:first-child{
+    color: #333;
+    border-radius:15px 0px 0 0;
 }
+th:last-child{
+    color: #333;
+    border-radius:0px 15px 0 0;
+}
+
+tr:last-child td:first-child {
+    border-radius:0 0 0px 15px;
+}
+
+tr:last-child td:last-child {
+    border-radius:0 0 15px 0px;
+}
+
 tbody tr:hover {
   font-weight: bold;
 }
