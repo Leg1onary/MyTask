@@ -11,7 +11,10 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-controller="myappCtrl" style="margin:5px">
-
+<div id="menu">
+  <a href="./index.html">Табличное отображение</a>
+  <a href="./index2.html">Блочное отображение</a>
+</div>
 <table>
   <thead>
   <tr>
@@ -23,6 +26,8 @@
   </tr>
 </table>
 <br>
+<a ng-href="./index2.html">Отображение в блочном виде</a>
+<br>
 <div>Клиентов в таблице: {{clients.length}}</div>
 <br>
 
@@ -31,7 +36,7 @@
   <br>
   <input class="btn-primary" type="submit" value="Добавить">
 </form>
-<div>Данные нового клиента:
+<div class="inform">Данные нового клиента:
   {{newClientObj}}</div>
 
 <h2>Структура Clients</h2>

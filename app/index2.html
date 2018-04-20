@@ -1,0 +1,45 @@
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="myappCtrl" style="margin:5px">
+<div id="menu">
+    <a href="./index.html">Табличное отображение</a>
+    <a href="./index2.html">Блочное отображение</a>
+</div>
+<div ng-repeat="client in clients" class="clientBlock">
+    <div ng-repeat="meta in metaData"><b>{{meta}}</b>:{{client[meta]}}</div>
+    <a data-role="remove" ng-click="archive($index)"><button>Удалить</button></a>
+</div>
+<div style="clear:both"></div>
+<br>
+<div>Клиентов: {{clients.length}}</div>
+<br>
+
+<form ng-submit="addClient()">
+    <input ng-repeat="meta in metaData" type="text" ng-model=newClientObj[meta] placeholder="{{meta}}">
+    <br>
+    <input class="btn-primary" type="submit" value="Добавить">
+</form>
+<div class="inform">Данные нового клиента:
+    {{newClientObj}}</div>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
