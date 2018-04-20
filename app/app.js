@@ -26,9 +26,11 @@ myApp.controller('myappCtrl', function ($scope, $http) {
         $scope.archive = function (indx) {
             $scope.clients.splice(indx,1);
         };
+        $scope.newClientObj = {}
         //добавление клиента в таблицу
         $scope.addClient = function() {
-
+            $scope.clients.push($scope.newClientObj);
+            $scope.newClientObj = {}
         }
 
     });

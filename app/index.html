@@ -25,10 +25,15 @@
 <br>
 <div>Клиентов в таблице: {{clients.length}}</div>
 <br>
+
 <form ng-submit="addClient()">
-  <input ng-repeat="meta in metaData" type="text" ng-model="newClient" placeholder="{{meta}}">
+  <input ng-repeat="meta in metaData" type="text" ng-model=newClientObj[meta] placeholder="{{meta}}">
+  <br>
   <input class="btn-primary" type="submit" value="Добавить">
 </form>
+<div>Данные нового клиента:
+  {{newClientObj}}</div>
+
 <h2>Структура Clients</h2>
 <div ng-repeat="client in clients" style="margin-left:10px;">{{client}}<br><br></div>
   <!-- In production use:
