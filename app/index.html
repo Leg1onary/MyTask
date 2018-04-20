@@ -22,14 +22,14 @@
     <td ng-repeat="meta in metaData">{{client[meta]}}</td><td><a data-role="remove" ng-click="archive($index)"><button>Удалить</button></a> </td>
   </tr>
 </table>
-<br><br>
-<!-- требуется корректировка формы, проблема с занесением в таблицу
+<br>
+<div>Клиентов в таблице: {{clients.length}}</div>
+<br>
 <form ng-submit="addClient()">
-  <input type="text" ng-model="newClient" placeholder="добавление нового клиента">
+  <input ng-repeat="meta in metaData" type="text" ng-model="newClient" placeholder="{{meta}}">
   <input class="btn-primary" type="submit" value="Добавить">
-</form> -->
-<br><br>
-<h2>Структура</h2>
+</form>
+<h2>Структура Clients</h2>
 <div ng-repeat="client in clients" style="margin-left:10px;">{{client}}<br><br></div>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
