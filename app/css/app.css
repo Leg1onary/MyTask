@@ -10,19 +10,19 @@ td, th {
 }
 th:first-child{
     color: #333;
-    border-radius:15px 0px 0 0;
+    border-radius:15px 0 0 0;
 }
 th:last-child{
     color: #333;
-    border-radius:0px 15px 0 0;
+    border-radius:0 15px 0 0;
 }
 
 tr:last-child td:first-child {
-    border-radius:0 0 0px 15px;
+    border-radius:0 0 0 15px;
 }
 
 tr:last-child td:last-child {
-    border-radius:0 0 15px 0px;
+    border-radius:0 0 15px 0;
 }
 
 tbody tr:hover {
@@ -52,7 +52,7 @@ td:nth-child(2),td:nth-child(3),td:nth-child(4) {text-align:center}
 #menu {
     background-color: #D8D8D8;
     margin-bottom: 10px;
-    padding: 5px 0px 5px 5px;
+    padding: 5px 0 5px 5px;
 }
 
 #menu > a {
